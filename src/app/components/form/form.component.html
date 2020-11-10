@@ -1,0 +1,29 @@
+<form (ngSubmit)="f.form.valid && addValue(); f.resetForm()" #f="ngForm">
+    <div class="agregar">
+            <mat-form-field class="agregar_tipo">
+                <mat-select (selectionChange)="operation($event.value)">
+                    <mat-option value="ingresoOperation" selected>
+                        +
+                    </mat-option>
+                    <mat-option value="egresoOperation">
+                        -
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="agregar_descripcion">
+                <input matInput
+                type="text" name="description"
+                [(ngModel)]="description"
+                maxlength="20" placeholder="Agregar Descripción" required>
+            </mat-form-field>
+            <mat-form-field class="agregar_valor">
+                <input matInput
+                type="number" name="value"
+                [(ngModel)]="value"
+                maxlength="12" placeholder="Valor" required>
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="primary" [disabled]="!f.form.valid">
+                Agregar
+            </button>
+    </div>
+  </form>

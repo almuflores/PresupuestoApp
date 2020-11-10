@@ -1,0 +1,18 @@
+<mat-card class="ingreso">
+    <mat-card-header>
+        <mat-card-title class="ingreso_titulo">INGRESOS</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngFor="let ingreso of ingresos" class="ingresos">
+            <div class="elemento_descripcion">{{ingreso.description}}</div>
+            <div class="right limpiarEstilos">
+                <div class="elemento_valor">{{ingreso.value | currency: 'ARS':'€':'1.2-2'}}
+                <button class="ingresoDeleteBtn"
+                (click)="deleteRegister(ingreso)">
+                <mat-icon>delete</mat-icon>
+                </button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,10 @@
+form {
+    max-width: 50em;
+    padding: 2em;
+}
+
+.select, .description, .value{
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    max-width: 17em;
+}

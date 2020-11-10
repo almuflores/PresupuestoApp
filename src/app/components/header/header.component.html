@@ -1,0 +1,17 @@
+<mat-card class="cabecero">
+    <mat-card-header>
+        <mat-card-title class="presupuesto_titulo">Presupuesto Disponible:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+            <div class="presupuesto_valor"><b>{{presupuestoTotal | currency: 'ARS':'€':'1.2-2'}}</b></div>
+        <div fxLayout="row wrap" fxLayoutAlign="center">
+        <div class="ingresos">
+            Ingresos   <b>{{ingresoTotal | currency: 'ARS':'€':'1.2-2'}}</b>
+        </div>
+        <div mat-flat-button color="warn" class="egresos" >
+            Gastos   <b>-{{egresoTotal | currency: 'ARS':'€':'1.2-2'}} ({{porcentajeTotal | percent}})</b>
+        </div>
+    </div>
+    </mat-card-content>
+</mat-card>
+
